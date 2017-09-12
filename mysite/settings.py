@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -100,3 +101,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR + '/static/'
+
+from . import passwords
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = passwords.GMAILLOGIN
+EMAIL_HOST_PASSWORD = passwords.GMAILPASS
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
