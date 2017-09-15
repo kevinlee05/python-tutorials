@@ -104,6 +104,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR + '/static/'
 
+STATISFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+        )
+
 from . import passwords
 
 EMAIL_HOST = 'smtp.gmail.com'
