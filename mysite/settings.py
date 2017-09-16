@@ -37,10 +37,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
-    'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'haystack',
+    'blog',
+    'taggit',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -117,3 +119,13 @@ EMAIL_HOST_USER = passwords.GMAILLOGIN
 EMAIL_HOST_PASSWORD = passwords.GMAILPASS
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+    },
+}
+
+
+

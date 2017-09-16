@@ -17,5 +17,7 @@ urlpatterns =[
     url(r'^(?P<post_id>\d+)/share/$', views.post_share, name='post_share'),
     # latest posts feed view
     url(r'^feed/$', LatestPostsFeed(), name='post_feed'),
+    #search
+    url(r'^search/$', views.post_search, name='post_search'),
 
 ]
