@@ -1,4 +1,5 @@
 -f /usr/share/pip-wheels
 Django==1.8.6
 django-taggit==0.17.1
+Markdown==2.6.2
 pytz==2017.2
