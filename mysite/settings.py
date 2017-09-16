@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'haystack',
     'blog',
     'taggit',
+    'shop',
 
 )
 
@@ -127,5 +128,6 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
