@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Kevin's Homepage{% endblock %}
+
+{% block content %}
+<h1>Homepage</h1>
+<div id="container">
+    <a href="{% url 'catalog:index' %}">Catalog Tutorial</a>
+</div>
+{% endblock %}
