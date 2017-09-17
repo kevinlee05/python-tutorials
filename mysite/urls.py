@@ -26,10 +26,11 @@ sitemaps = {
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('shop.urls', namespace='shop')),
     url(r'^blog/', include('blog.urls', namespace='blog', app_name='blog') ),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps },
         name='django.contrib.sitemaps.views.sitemap'),
+    url(r'^cart/', include('cart.urls', namespace='cart')),
+    url(r'^', include('shop.urls', namespace='shop')),
 ]
 
 if settings.DEBUG:
