@@ -1,1 +1,2 @@
-django blog tutorial "Django By Example"
+
+Django tutorial "Django By Example"
