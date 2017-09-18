@@ -45,7 +45,10 @@ INSTALLED_APPS = (
     'shop',
     'cart',
     'orders',
+    'kombu.transport.django',
 )
+
+BROKER_URL = "django://" #using the django orm for celery messaging
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -134,4 +137,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CART_SESSION_ID = 'cart'
+
+
 
