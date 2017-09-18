@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps },
         name='django.contrib.sitemaps.views.sitemap'),
     url(r'^cart/', include('cart.urls', namespace='cart')),
+    url(r'^orders/', include('orders.urls', namespace='orders')),
     url(r'^', include('shop.urls', namespace='shop')),
 ]
 

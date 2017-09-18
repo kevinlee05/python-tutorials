@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'taggit',
     'shop',
     'cart',
+    'orders',
 )
 
 MIDDLEWARE_CLASSES = (
