@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'cart',
     'orders',
     'kombu.transport.django',
+    'paypal.standard.ipn',
 )
 
 BROKER_URL = "django://" #using the django orm for celery messaging
@@ -126,6 +127,11 @@ EMAIL_HOST_PASSWORD = passwords.GMAILPASS
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+#django-paypal settings
+PAYPAL_RECEIVER_EMAIL = passwords.PAYPAL_EMAIL
+PAYPAL_TEST = True #for testing paypal in a sandbox
+
+#haystack search setup using whoosh
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
@@ -133,10 +139,15 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/media/' #debug only not for production
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CART_SESSION_ID = 'cart'
+
+
+
+
+
 
 
 
