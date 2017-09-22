@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'orders',
     'kombu.transport.django',
     'paypal.standard.ipn',
+    'payment',
 )
 
 BROKER_URL = "django://" #using the django orm for celery messaging
