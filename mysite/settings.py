@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'account', #load before admin for css override
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,7 +43,6 @@ INSTALLED_APPS = (
     'haystack',
     'blog',
     'taggit',
-    'account',
     'shop',
     'cart',
     'orders',
@@ -65,6 +65,13 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'mysite.urls'
+
+#Login and logout urls
+from django.core.urlresolvers import reverse_lazy
+LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
+LOGIN_URL = reverse_lazy('login')
+LOGOUT_URL = reverse_lazy('logout')
+
 
 TEMPLATES = [
     {
@@ -121,13 +128,15 @@ STATISFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
         )
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 from . import passwords
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = passwords.GMAILLOGIN
-EMAIL_HOST_PASSWORD = passwords.GMAILPASS
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+#EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_HOST_USER = passwords.GMAILLOGIN
+#EMAIL_HOST_PASSWORD = passwords.GMAILPASS
+#EMAIL_PORT = 587
+#EMAIL_USE_TLS = True
 
 #django-paypal settings
 PAYPAL_RECEIVER_EMAIL = passwords.PAYPAL_EMAIL
