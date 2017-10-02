@@ -128,15 +128,15 @@ STATISFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
         )
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 from . import passwords
 
-#EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_HOST_USER = passwords.GMAILLOGIN
-#EMAIL_HOST_PASSWORD = passwords.GMAILPASS
-#EMAIL_PORT = 587
-#EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = passwords.GMAILLOGIN
+EMAIL_HOST_PASSWORD = passwords.GMAILPASS
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 #django-paypal settings
 PAYPAL_RECEIVER_EMAIL = passwords.PAYPAL_EMAIL
