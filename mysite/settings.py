@@ -51,6 +51,12 @@ INSTALLED_APPS = (
     'payment',
 )
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+)
+
+
 BROKER_URL = "django://" #using the django orm for celery messaging
 
 MIDDLEWARE_CLASSES = (
