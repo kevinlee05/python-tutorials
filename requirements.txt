@@ -20,11 +20,16 @@ idna==2.6
 kombu==3.0.37
 lxml==4.0.0
 Markdown==2.6.2
+oauthlib==2.0.4
 Pillow==2.9.0
 pycparser==2.18
+PyJWT==1.5.3
 Pyphen==0.9.4
+python-social-auth==0.2.12
+python3-openid==3.1.0
 pytz==2017.2
 requests==2.18.4
+requests-oauthlib==0.8.0
 six==1.11.0
 tinycss==0.4
 tinycss2==0.6.0

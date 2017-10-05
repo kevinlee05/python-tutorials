@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from . import passwords #passwords and login ids and keys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -40,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'social.apps.django_app.default',
     'haystack',
     'blog',
     'taggit',
@@ -54,7 +56,13 @@ INSTALLED_APPS = (
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social.backends.facebook.Facebook2OAuth2',
 )
+
+#facebook social auth
+SOCIAL_AUTH_FACEBOOK_KEY = passwords.FACEBOOK_KEY
+SOCIAL_AUTH_FACEBOOK_SECRET = passwords.FACEBOOK_SECRET
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 
 
 BROKER_URL = "django://" #using the django orm for celery messaging
@@ -135,8 +143,6 @@ STATISFILES_DIRS = (
         )
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-from . import passwords
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = passwords.GMAILLOGIN

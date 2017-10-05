@@ -27,6 +27,7 @@ sitemaps = {
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^account/', include('account.urls')),
+    url('social-auth/', include('social.apps.django_app.urls', namespace='social')),
     url(r'^blog/', include('blog.urls', namespace='blog', app_name='blog') ),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps },
         name='django.contrib.sitemaps.views.sitemap'),
