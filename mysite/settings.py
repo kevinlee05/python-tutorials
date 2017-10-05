@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'social.apps.django_app.default',
+    'images',
     'haystack',
     'blog',
     'taggit',
