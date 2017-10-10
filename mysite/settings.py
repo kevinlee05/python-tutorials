@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'social.apps.django_app.default',
     'images',
+    'sorl.thumbnail',
     'haystack',
     'blog',
     'taggit',
