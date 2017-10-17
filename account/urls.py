@@ -25,6 +25,10 @@ urlpatterns =[
         url(r'^register/$', views.register, name='register'),
         url(r'^edit/$', views.edit, name='edit'),
 
+        #user views
+        url(r'^users/$', views.user_list, name='user_list'),
+        url(r'^users/(?P<username>[-\w]+)/$', views.user_detail, name='user_detail'),
+
         url(r'^$', views.dashboard, name='dashboard'),
 
     ]
