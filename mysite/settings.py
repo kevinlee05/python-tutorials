@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'social.apps.django_app.default',
     'images',
     'sorl.thumbnail',
+    'actions',
     'haystack',
     'blog',
     'taggit',
@@ -51,8 +52,7 @@ INSTALLED_APPS = (
     'cart',
     'orders',
     'kombu.transport.django',
-    'paypal.standard.ipn',
-    'payment',
+
 )
 
 AUTHENTICATION_BACKENDS = (
