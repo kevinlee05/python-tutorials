@@ -32,7 +32,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'account', #load before admin for css override
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,18 +40,22 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.sitemaps',
-    'social.apps.django_app.default',
-    'images',
-    'sorl.thumbnail',
-    'actions',
-    'haystack',
-    'blog',
-    'taggit',
+    # shop apps
     'shop',
     'cart',
     'orders',
     'kombu.transport.django',
-
+    'coupons',
+    #social images app
+    'account', #load before admin for css override
+    'social.apps.django_app.default',
+    'images',
+    'sorl.thumbnail',
+    'actions',
+    # blog apps
+    'haystack',
+    'blog',
+    'taggit',
 )
 
 AUTHENTICATION_BACKENDS = (
