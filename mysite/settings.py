@@ -74,6 +74,7 @@ BROKER_URL = "django://" #using the django orm for celery messaging
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.local.LocalMiddleware', #local middleware for internationalization after session before common
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -131,7 +132,19 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
+
+#tuple of languages website to be translated to
+from django.utils.translation import gettext_lazy as _
+
+LANGUAGES = (
+    ('en', _('English') ),
+    ('es', _('Spanish') ),
+)
+
+LOCALE_PATHS = ( #for translation
+    os.path.join(BASE_DIR, 'locale/'),
+)
 
 TIME_ZONE = 'UTC'
 
