@@ -52,8 +52,10 @@ def image_like(request):
             if action == 'like':
                 image.users_like.add(request.user)
                 create_action(request.user, 'likes', image)
+                # image.total_likes = image.users_like.count()
             else:
                 image.users_like.remove(request.user)
+                # image.total_likes = image.users_like.count()
             return JsonResponse({'status':'ok'})
         except:
             pass
