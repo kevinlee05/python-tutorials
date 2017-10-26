@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'orders',
     'kombu.transport.django',
     'coupons',
+    'rosetta',
     #social images app
     'account', #load before admin for css override
     'social.apps.django_app.default',
@@ -74,7 +75,7 @@ BROKER_URL = "django://" #using the django orm for celery messaging
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.local.LocalMiddleware', #local middleware for internationalization after session before common
+    'django.middleware.locale.LocaleMiddleware', #local middleware for internationalization after session before common
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
