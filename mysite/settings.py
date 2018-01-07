@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'kombu.transport.django',
     'coupons',
     'rosetta',
+    'parler', #django-parler for model translation
     #social images app
     'account', #load before admin for css override
     'social.apps.django_app.default',
@@ -191,7 +192,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CART_SESSION_ID = 'cart'
 
-
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en',},
+        {'code': 'es',},
+    ),
+    'default': {
+        'fallback': 'en',
+        'hide_untranslated': False,
+    }
+}
 
 
 
