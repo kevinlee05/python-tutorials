@@ -21,7 +21,7 @@ from snippets.permissions import IsOwnerOrReadOnly
 def api_root(request, format=None):
     return Response({
         'users': reverse('user-list', request=request, format=format),
-        'snippets': revers('snippet-list', request=request, format=format)
+        'snippets': reverse('snippet-list', request=request, format=format)
         })
 
 class SnippetHighlight(generics.GenericAPIView):
