@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-.pyc
-=======
 *.pyc
 db.sqlite3
 static
 *.swp
 mysite/whoosh_index/
 media
->>>>>>> django-by-example/master
-=======
-*.pyc
->>>>>>> DRFtut/master
+
+
