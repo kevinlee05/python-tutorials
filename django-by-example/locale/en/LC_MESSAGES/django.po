@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-06 09:24+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: cart/forms.py:7
+msgid "Quantity"
+msgstr ""
+
+#: coupons/forms.py:5
+msgid "Coupon"
+msgstr ""
+
+#: mysite/settings.py:142
+msgid "English"
+msgstr ""
+
+#: mysite/settings.py:143
+msgid "Spanish"
+msgstr ""
+
+#: mysite/urls.py:22
+msgid "^cart/"
+msgstr ""
+
+#: mysite/urls.py:23
+msgid "^orders/"
+msgstr ""
+
+#: mysite/urls.py:24
+msgid "^payment/"
+msgstr ""
+
+#: mysite/urls.py:26
+msgid "^coupons/"
+msgstr ""
+
+#: payment/urls.py:6
+msgid "^process/$"
+msgstr ""
+
+#: payment/urls.py:7
+msgid "^done/$"
+msgstr ""
+
+#: payment/urls.py:8
+msgid "^canceled/$"
+msgstr ""
+
+#: shop/templates/shop/base.html:7 shop/templates/shop/base.html.py:12
+msgid "My shop"
+msgstr ""
+
+#: shop/templates/shop/base.html:17
+msgid "Language"
+msgstr ""
+
+#: shop/templates/shop/base.html:36
+msgid "Your cart"
+msgstr ""
+
+#: shop/templates/shop/base.html:38
+#, python-format
+msgid ""
+"\n"
+"                            %(total_items)s item%(total_items_plural)s, $"
+"%(total_price)s\n"
+"                        "
+msgstr ""
+
+#: shop/templates/shop/base.html:43
+msgid "Your cart is empty."
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:19
+msgid "Add to cart"
+msgstr ""
